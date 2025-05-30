@@ -7,6 +7,8 @@
 .. Add your content using ``reStructuredText`` syntax. See the
 .. `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
 .. documentation for details.
+:
+===
 Welcome to Ascendia:
 =========================
 Bienvenue dans l’univers d’**Ascendia**, un serveur Minecraft où aventure, stratégie et communauté se rencontrent !
@@ -26,7 +28,7 @@ Bonne lecture et bon jeu sur Ascendia !
 
 
 1. Règles Générales Ascendia:
-----------------------------
+--------------------------------
 Ces règles s'appliquent à tous les membres de la communauté Ascendia, que ce soit sur le serveur Faction ou Skyblock.
 
 1. Comportement Généra:
