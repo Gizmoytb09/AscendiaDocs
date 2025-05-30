@@ -2,8 +2,10 @@
    sphinx-quickstart on Thu May 29 22:24:48 2025.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+Test:
+======
 
-Welcome to Ascendia
+Welcome to Ascendia:
 ============================
 Bienvenue dans l’univers d’**Ascendia**, un serveur Minecraft où aventure, stratégie et communauté se rencontrent !
 
@@ -29,7 +31,7 @@ Bonne lecture et bon jeu sur Ascendia !
 
 Ces règles s'appliquent à tous les membres de la communauté Ascendia, que ce soit sur le serveur Faction ou Skyblock.
 
-1. **Comportement Général **:
+1. **Comportement Général**:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - **Comportement Respectueux** : La discrimination, les propos haineux ou le contenu offensant sont strictement interdits.  
@@ -310,7 +312,8 @@ En restant sur le **serveur Discord Ascendia**, vous reconnaissez avoir **lu, co
 Merci de faire partie de notre communauté ! 💚💙  
 — L’équipe Ascendia & la Dev Team
 
-
+FAQ:
+=====
 
 Ascendia WIKI
 ===============
