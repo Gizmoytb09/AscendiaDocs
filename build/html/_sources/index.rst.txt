@@ -8,7 +8,7 @@
 .. `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
 .. documentation for details.
 ::
-=
+===
 Welcome to Ascendia:
 =========================
 Bienvenue dans l’univers d’**Ascendia**, un serveur Minecraft où aventure, stratégie et communauté se rencontrent !
