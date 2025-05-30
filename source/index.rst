@@ -30,7 +30,7 @@ Bonne lecture et bon jeu sur Ascendia !
 Ces règles s'appliquent à tous les membres de la communauté Ascendia, que ce soit sur le serveur Faction ou Skyblock.
 
 1. Comportement Généra:
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - **Comportement Respectueux** : La discrimination, les propos haineux ou le contenu offensant sont strictement interdits.  
   - ``Exemple : utiliser des insultes ou des propos dégradants dans le chat.``
