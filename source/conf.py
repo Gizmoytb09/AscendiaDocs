@@ -7,7 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Ascendia Docs'
-copyright = '2025 Ascendia Dev Team & Ascendia Minecraft Server Group. All rights reserved.'
+copyright = '''2025 Ascendia Group. All rights reserved. Developed by the Ascendia Dev Team. 
+Operated and maintained by the Ascendia Minecraft Server Division.'''
 author = 'Ascendia Dev Team & Ascendia Minecraft Server Group '
 release = 'V1'
 

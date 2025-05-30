@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-
-<html :class="{'dark': darkMode === 'dark' || (darkMode === 'system' &amp;&amp; window.matchMedia('(prefers-color-scheme: dark)').matches)}" class="scroll-smooth" data-content_root="./" lang="fr" x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }" x-init="$watch('darkMode', val =&gt; localStorage.setItem('darkMode', val))">
+<html lang="fr"
+      data-content_root="./"
+      x-data="{ darkMode: localStorage.getItem('darkMode') || localStorage.setItem('darkMode', 'system'), activeSection: '' }"
+      x-init="$watch('darkMode', val => localStorage.setItem('darkMode', val))"
+      class="scroll-smooth"
+      :class="{'dark': darkMode === 'dark' || (darkMode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)}"
+>
 <head>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta charset="utf-8"/>
-<meta content="white" media="(prefers-color-scheme: light)" name="theme-color"/>
-<meta content="black" media="(prefers-color-scheme: dark)" name="theme-color"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>: | Documentation Ascendia Docs V1</title>
-<meta content=": | Documentation Ascendia Docs V1" property="og:title"/>
-<meta content=": | Documentation Ascendia Docs V1" name="twitter:title"/>
-<link href="_static/pygments.css?v=e72c8e07" rel="stylesheet" type="text/css"/>
-<link href="_static/theme.css?v=42baaae4" rel="stylesheet" type="text/css"/>
-<link href="search.html" rel="search" title="Recherche"/>
-<link href="genindex.html" rel="index" title="Index"/>
-<script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>: | Documentation Ascendia Docs V1</title>
+    <meta property="og:title" content=": | Documentation Ascendia Docs V1" />
+    <meta name="twitter:title" content=": | Documentation Ascendia Docs V1" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=e72c8e07" />
+      <link rel="stylesheet" type="text/css" href="_static/theme.css?v=42baaae4" />
+        <link rel="search" title="Recherche" href="search.html" />
+        <link rel="index" title="Index" href="genindex.html" />
+
+    <script>
     <!-- Prevent Flash of wrong theme -->
       const userPreference = localStorage.getItem('darkMode');
       let mode;
@@ -27,58 +34,90 @@
       if (!userPreference) {localStorage.setItem('darkMode', mode)}
     </script>
 </head>
-<body :class="{ 'overflow-hidden': showSidebar }" class="min-h-screen font-sans antialiased bg-background text-foreground" x-data="{ showSidebar: false, showScrollTop: false }">
-<div @click.self="showSidebar = false" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" x-cloak="" x-show="showSidebar"></div><div class="relative flex flex-col min-h-screen" id="page"><a class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100" href="#content">
+  <body x-data="{ showSidebar: false, showScrollTop: false }" class="min-h-screen font-sans antialiased bg-background text-foreground" :class="{ 'overflow-hidden': showSidebar }">
+    <div x-cloak x-show="showSidebar" class="fixed inset-0 z-50 overflow-hidden bg-background/80 backdrop-blur-sm md:hidden" @click.self="showSidebar = false"></div><div id="page" class="relative flex flex-col min-h-screen"><a href="#content" class="absolute top-0 left-0 z-[100] block bg-background p-4 text-xl transition -translate-x-full opacity-0 focus:translate-x-0 focus:opacity-100">
       Skip to content
-    </a><header class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
-<div class="hidden mr-4 md:flex">
-<a class="flex items-center mr-6" href="#"><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">Documentation Ascendia Docs V1</span>
-</a></div><button @click="showSidebar = true" class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden" type="button">
-<svg aria-hidden="true" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M152.587 825.087q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440Zm0-203.587q-19.152 0-32.326-13.174T107.087 576q0-19.152 13.174-32.326t32.326-13.174h320q19.152 0 32.326 13.174T518.087 576q0 19.152-13.174 32.326T472.587 621.5h-320Zm0-203.587q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440ZM708.913 576l112.174 112.174q12.674 12.674 12.674 31.826t-12.674 31.826Q808.413 764.5 789.261 764.5t-31.826-12.674l-144-144Q600 594.391 600 576t13.435-31.826l144-144q12.674-12.674 31.826-12.674t31.826 12.674q12.674 12.674 12.674 31.826t-12.674 31.826L708.913 576Z"></path>
-</svg>
-<span class="sr-only">Toggle navigation menu</span>
-</button>
-<div class="flex items-center justify-between flex-1 space-x-2 sm:space-x-4 md:justify-end">
-<div class="flex-1 w-full md:w-auto md:flex-none"><form @keydown.k.window.meta="$refs.search.focus()" action="search.html" class="relative flex items-center group" id="searchbox" method="get">
-<input aria-label="Search the docs" class="inline-flex items-center font-medium transition-colors bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background border border-input hover:bg-accent focus:bg-accent hover:text-accent-foreground focus:text-accent-foreground hover:placeholder-accent-foreground py-2 px-4 relative h-9 w-full justify-start rounded-[0.5rem] text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64" id="search-input" name="q" placeholder="Search ..." type="search" x-ref="search"/>
-<kbd class="pointer-events-none absolute right-1.5 top-2 hidden h-5 select-none text-muted-foreground items-center gap-1 rounded border border-border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex group-hover:bg-accent group-hover:text-accent-foreground">
-<span class="text-xs">⌘</span>
+    </a><header
+  class="sticky top-0 z-40 w-full border-b shadow-sm border-border supports-backdrop-blur:bg-background/60 bg-background/95 backdrop-blur"><div class="container flex items-center h-14">
+    <div class="hidden mr-4 md:flex">
+      <a href="#" class="flex items-center mr-6"><span class="hidden font-bold sm:inline-block text-clip whitespace-nowrap">Documentation Ascendia Docs V1</span>
+      </a></div><button
+      class="inline-flex items-center justify-center h-10 px-0 py-2 mr-2 text-base font-medium transition-colors rounded-md hover:text-accent-foreground hover:bg-transparent md:hidden"
+      type="button" @click="showSidebar = true">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 96 960 960" aria-hidden="true"
+        fill="currentColor">
+        <path
+          d="M152.587 825.087q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440Zm0-203.587q-19.152 0-32.326-13.174T107.087 576q0-19.152 13.174-32.326t32.326-13.174h320q19.152 0 32.326 13.174T518.087 576q0 19.152-13.174 32.326T472.587 621.5h-320Zm0-203.587q-19.152 0-32.326-13.174t-13.174-32.326q0-19.152 13.174-32.326t32.326-13.174h440q19.152 0 32.326 13.174t13.174 32.326q0 19.152-13.174 32.326t-32.326 13.174h-440ZM708.913 576l112.174 112.174q12.674 12.674 12.674 31.826t-12.674 31.826Q808.413 764.5 789.261 764.5t-31.826-12.674l-144-144Q600 594.391 600 576t13.435-31.826l144-144q12.674-12.674 31.826-12.674t31.826 12.674q12.674 12.674 12.674 31.826t-12.674 31.826L708.913 576Z" />
+      </svg>
+      <span class="sr-only">Toggle navigation menu</span>
+    </button>
+    <div class="flex items-center justify-between flex-1 space-x-2 sm:space-x-4 md:justify-end">
+      <div class="flex-1 w-full md:w-auto md:flex-none"><form id="searchbox"
+      action="search.html"
+      method="get"
+      class="relative flex items-center group"
+      @keydown.k.window.meta="$refs.search.focus()">
+  <input x-ref="search"
+          name="q"
+          id="search-input"
+          type="search"
+          aria-label="Search the docs"
+          placeholder="Search ..."
+          class="inline-flex items-center font-medium transition-colors bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background border border-input hover:bg-accent focus:bg-accent hover:text-accent-foreground focus:text-accent-foreground hover:placeholder-accent-foreground py-2 px-4 relative h-9 w-full justify-start rounded-[0.5rem] text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64" />
+  <kbd class="pointer-events-none absolute right-1.5 top-2 hidden h-5 select-none text-muted-foreground items-center gap-1 rounded border border-border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex group-hover:bg-accent group-hover:text-accent-foreground">
+    <span class="text-xs">⌘</span>
     K
   </kbd>
 </form>
-</div>
-<nav class="flex items-center space-x-1">
-<button @click="darkMode = darkMode === 'light' ? 'dark' : 'light'" aria-label="Color theme switcher" class="relative inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground h-9 w-9" type="button">
-<svg class="absolute transition-all scale-100 rotate-0 dark:-rotate-90 dark:scale-0" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M480 685q45.456 0 77.228-31.772Q589 621.456 589 576q0-45.456-31.772-77.228Q525.456 467 480 467q-45.456 0-77.228 31.772Q371 530.544 371 576q0 45.456 31.772 77.228Q434.544 685 480 685Zm0 91q-83 0-141.5-58.5T280 576q0-83 58.5-141.5T480 376q83 0 141.5 58.5T680 576q0 83-58.5 141.5T480 776ZM80 621.5q-19.152 0-32.326-13.174T34.5 576q0-19.152 13.174-32.326T80 530.5h80q19.152 0 32.326 13.174T205.5 576q0 19.152-13.174 32.326T160 621.5H80Zm720 0q-19.152 0-32.326-13.174T754.5 576q0-19.152 13.174-32.326T800 530.5h80q19.152 0 32.326 13.174T925.5 576q0 19.152-13.174 32.326T880 621.5h-80Zm-320-320q-19.152 0-32.326-13.174T434.5 256v-80q0-19.152 13.174-32.326T480 130.5q19.152 0 32.326 13.174T525.5 176v80q0 19.152-13.174 32.326T480 301.5Zm0 720q-19.152 0-32.326-13.17Q434.5 995.152 434.5 976v-80q0-19.152 13.174-32.326T480 850.5q19.152 0 32.326 13.174T525.5 896v80q0 19.152-13.174 32.33-13.174 13.17-32.326 13.17ZM222.174 382.065l-43-42Q165.5 327.391 166 308.239t13.174-33.065q13.435-13.674 32.587-13.674t32.065 13.674l42.239 43q12.674 13.435 12.555 31.706-.12 18.272-12.555 31.946-12.674 13.674-31.445 13.413-18.772-.261-32.446-13.174Zm494 494.761-42.239-43q-12.674-13.435-12.674-32.087t12.674-31.565Q686.609 756.5 705.38 757q18.772.5 32.446 13.174l43 41.761Q794.5 824.609 794 843.761t-13.174 33.065Q767.391 890.5 748.239 890.5t-32.065-13.674Zm-42-494.761Q660.5 369.391 661 350.62q.5-18.772 13.174-32.446l41.761-43Q728.609 261.5 747.761 262t33.065 13.174q13.674 13.435 13.674 32.587t-13.674 32.065l-43 42.239q-13.435 12.674-31.706 12.555-18.272-.12-31.946-12.555Zm-495 494.761Q165.5 863.391 165.5 844.239t13.674-32.065l43-42.239q13.435-12.674 32.087-12.674t31.565 12.674Q299.5 782.609 299 801.38q-.5 18.772-13.174 32.446l-41.761 43Q231.391 890.5 212.239 890t-33.065-13.174ZM480 576Z"></path>
-</svg>
-<svg class="absolute transition-all scale-0 rotate-90 dark:rotate-0 dark:scale-100" fill="currentColor" height="24" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M480 936q-151 0-255.5-104.5T120 576q0-138 90-239.5T440 218q25-3 39 18t-1 44q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q21-14 43-1.5t19 39.5q-14 138-117.5 229T480 936Zm0-80q88 0 158-48.5T740 681q-20 5-40 8t-40 3q-123 0-209.5-86.5T364 396q0-20 3-40t8-40q-78 32-126.5 102T200 576q0 116 82 198t198 82Zm-10-270Z"></path>
-</svg>
-</button>
-</nav>
-</div>
-</div>
+      </div>
+      <nav class="flex items-center space-x-1">
+        <button @click="darkMode = darkMode === 'light' ? 'dark' : 'light'"
+          class="relative inline-flex items-center justify-center px-0 text-sm font-medium transition-colors rounded-md hover:bg-accent hover:text-accent-foreground h-9 w-9"
+          type="button"
+          aria-label="Color theme switcher">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 96 960 960" fill="currentColor"
+            class="absolute transition-all scale-100 rotate-0 dark:-rotate-90 dark:scale-0">
+            <path
+              d="M480 685q45.456 0 77.228-31.772Q589 621.456 589 576q0-45.456-31.772-77.228Q525.456 467 480 467q-45.456 0-77.228 31.772Q371 530.544 371 576q0 45.456 31.772 77.228Q434.544 685 480 685Zm0 91q-83 0-141.5-58.5T280 576q0-83 58.5-141.5T480 376q83 0 141.5 58.5T680 576q0 83-58.5 141.5T480 776ZM80 621.5q-19.152 0-32.326-13.174T34.5 576q0-19.152 13.174-32.326T80 530.5h80q19.152 0 32.326 13.174T205.5 576q0 19.152-13.174 32.326T160 621.5H80Zm720 0q-19.152 0-32.326-13.174T754.5 576q0-19.152 13.174-32.326T800 530.5h80q19.152 0 32.326 13.174T925.5 576q0 19.152-13.174 32.326T880 621.5h-80Zm-320-320q-19.152 0-32.326-13.174T434.5 256v-80q0-19.152 13.174-32.326T480 130.5q19.152 0 32.326 13.174T525.5 176v80q0 19.152-13.174 32.326T480 301.5Zm0 720q-19.152 0-32.326-13.17Q434.5 995.152 434.5 976v-80q0-19.152 13.174-32.326T480 850.5q19.152 0 32.326 13.174T525.5 896v80q0 19.152-13.174 32.33-13.174 13.17-32.326 13.17ZM222.174 382.065l-43-42Q165.5 327.391 166 308.239t13.174-33.065q13.435-13.674 32.587-13.674t32.065 13.674l42.239 43q12.674 13.435 12.555 31.706-.12 18.272-12.555 31.946-12.674 13.674-31.445 13.413-18.772-.261-32.446-13.174Zm494 494.761-42.239-43q-12.674-13.435-12.674-32.087t12.674-31.565Q686.609 756.5 705.38 757q18.772.5 32.446 13.174l43 41.761Q794.5 824.609 794 843.761t-13.174 33.065Q767.391 890.5 748.239 890.5t-32.065-13.674Zm-42-494.761Q660.5 369.391 661 350.62q.5-18.772 13.174-32.446l41.761-43Q728.609 261.5 747.761 262t33.065 13.174q13.674 13.435 13.674 32.587t-13.674 32.065l-43 42.239q-13.435 12.674-31.706 12.555-18.272-.12-31.946-12.555Zm-495 494.761Q165.5 863.391 165.5 844.239t13.674-32.065l43-42.239q13.435-12.674 32.087-12.674t31.565 12.674Q299.5 782.609 299 801.38q-.5 18.772-13.174 32.446l-41.761 43Q231.391 890.5 212.239 890t-33.065-13.174ZM480 576Z" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 96 960 960" fill="currentColor"
+            class="absolute transition-all scale-0 rotate-90 dark:rotate-0 dark:scale-100">
+            <path
+              d="M480 936q-151 0-255.5-104.5T120 576q0-138 90-239.5T440 218q25-3 39 18t-1 44q-17 26-25.5 55t-8.5 61q0 90 63 153t153 63q31 0 61.5-9t54.5-25q21-14 43-1.5t19 39.5q-14 138-117.5 229T480 936Zm0-80q88 0 158-48.5T740 681q-20 5-40 8t-40 3q-123 0-209.5-86.5T364 396q0-20 3-40t8-40q-78 32-126.5 102T200 576q0 116 82 198t198 82Zm-10-270Z" />
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </div>
 </header>
-<div class="flex-1"><div class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"><aside :aria-hidden="!showSidebar" :class="{ 'translate-x-0': showSidebar }" class="fixed inset-y-0 left-0 md:top-14 z-50 md:z-30 bg-background md:bg-transparent transition-all duration-100 -translate-x-full md:translate-x-0 ml-0 p-6 md:p-0 md:-ml-2 md:h-[calc(100vh-3.5rem)] w-5/6 md:w-full shrink-0 overflow-y-auto border-r border-border md:sticky" id="left-sidebar">
-<a class="!justify-start text-sm md:!hidden bg-background" href="#"><span class="font-bold text-clip whitespace-nowrap">Documentation Ascendia Docs V1</span>
-</a>
-<div class="relative overflow-hidden md:overflow-auto my-4 md:my-0 h-[calc(100vh-8rem)] md:h-auto">
-<div class="overflow-y-auto h-full w-full relative pr-6"><nav class="table w-full min-w-full my-6 lg:my-8">
+
+    <div class="flex-1"><div class="container flex-1 items-start md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"><aside id="left-sidebar"
+  class="fixed inset-y-0 left-0 md:top-14 z-50 md:z-30 bg-background md:bg-transparent transition-all duration-100 -translate-x-full md:translate-x-0 ml-0 p-6 md:p-0 md:-ml-2 md:h-[calc(100vh-3.5rem)] w-5/6 md:w-full shrink-0 overflow-y-auto border-r border-border md:sticky"
+  :aria-hidden="!showSidebar" :class="{ 'translate-x-0': showSidebar }">
+
+    <a href="#" class="!justify-start text-sm md:!hidden bg-background"><span class="font-bold text-clip whitespace-nowrap">Documentation Ascendia Docs V1</span>
+    </a>
+
+    <div class="relative overflow-hidden md:overflow-auto my-4 md:my-0 h-[calc(100vh-8rem)] md:h-auto">
+      <div class="overflow-y-auto h-full w-full relative pr-6"><nav class="table w-full min-w-full my-6 lg:my-8">
+  
 </nav>
-</div>
-</div>
-<button @click="showSidebar = false" class="absolute md:hidden right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100" type="button">
-<svg class="h-4 w-4" fill="currentColor" height="24" stroke="none" viewbox="0 96 960 960" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M480 632 284 828q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536 576l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480 632Z"></path>
-</svg>
-</button>
-</aside>
-<main class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
+      </div>
+    </div>
+    <button type="button" @click="showSidebar = false"
+      class="absolute md:hidden right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 96 960 960" fill="currentColor"
+        stroke="none" class="h-4 w-4">
+        <path
+          d="M480 632 284 828q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536 576l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480 632Z" />
+      </svg>
+    </button>
+  </aside>
+        <main class="relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols-[1fr_300px]">
 <div class="w-full min-w-0 mx-auto">
-<div id="content" role="main">
-<section id="id1">
+
+    <div id="content" role="main">
+      <section id="id1">
 <h1>:<a class="headerlink" href="#id1" title="Lien vers cette rubrique">¶</a></h1>
 </section>
 <section id="welcome-to-ascendia">
@@ -94,10 +133,10 @@ Nos équipes y sont présentes pour répondre à vos questions, organiser des é
 et vous tenir informé des dernières nouveautés.</p>
 <p>Bonne lecture et bon jeu sur Ascendia !</p>
 <section id="regles-generales-ascendia">
-<h2>1. Règles Générales Ascendia:<a class="headerlink" href="#regles-generales-ascendia" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#regles-generales-ascendia'">¶</a></h2>
+<h2>1. Règles Générales Ascendia:<a class="headerlink" href="#regles-generales-ascendia" title="Lien vers cette rubrique">¶</a></h2>
 <p>Ces règles s’appliquent à tous les membres de la communauté Ascendia, que ce soit sur le serveur Faction ou Skyblock.</p>
 <section id="comportement-genera">
-<h3>1. Comportement Généra:<a class="headerlink" href="#comportement-genera" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#comportement-genera'">¶</a></h3>
+<h3>1. Comportement Généra:<a class="headerlink" href="#comportement-genera" title="Lien vers cette rubrique">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Comportement Respectueux</strong> : La discrimination, les propos haineux ou le contenu offensant sont strictement interdits.
 - <code class="docutils literal notranslate"><span class="pre">Exemple</span> <span class="pre">:</span> <span class="pre">utiliser</span> <span class="pre">des</span> <span class="pre">insultes</span> <span class="pre">ou</span> <span class="pre">des</span> <span class="pre">propos</span> <span class="pre">dégradants</span> <span class="pre">dans</span> <span class="pre">le</span> <span class="pre">chat.</span></code></p></li>
@@ -106,7 +145,7 @@ et vous tenir informé des dernières nouveautés.</p>
 <li><p><strong>Pas de Publicité</strong> : La publicité pour d’autres serveurs ou services est interdite.
 - <code class="docutils literal notranslate"><span class="pre">Exemple</span> <span class="pre">:</span> <span class="pre">partager</span> <span class="pre">un</span> <span class="pre">lien</span> <span class="pre">vers</span> <span class="pre">un</span> <span class="pre">autre</span> <span class="pre">serveur</span> <span class="pre">Minecraft</span> <span class="pre">dans</span> <span class="pre">le</span> <span class="pre">chat.</span></code></p></li>
 <li><p><strong>Pas de Spam ou Flood</strong> : Pas d’envoi excessif de messages, de majuscules ou de caractères répétés.
-- <code class="docutils literal notranslate"><span class="pre">Exemple</span> <span class="pre">:</span> <span class="pre">écrire</span> <span class="pre">"REJOIGNEZ</span> <span class="pre">MAINTENANT</span> <span class="pre">!!!"</span> <span class="pre">plusieurs</span> <span class="pre">fois.</span></code></p></li>
+- <code class="docutils literal notranslate"><span class="pre">Exemple</span> <span class="pre">:</span> <span class="pre">écrire</span> <span class="pre">&quot;REJOIGNEZ</span> <span class="pre">MAINTENANT</span> <span class="pre">!!!&quot;</span> <span class="pre">plusieurs</span> <span class="pre">fois.</span></code></p></li>
 <li><p><strong>Pas d’Impersonation</strong> : Ne vous faites pas passer pour un membre du staff ou un autre joueur.
 - <code class="docutils literal notranslate"><span class="pre">Exemple</span> <span class="pre">:</span> <span class="pre">modifier</span> <span class="pre">votre</span> <span class="pre">pseudo</span> <span class="pre">pour</span> <span class="pre">imiter</span> <span class="pre">un</span> <span class="pre">membre</span> <span class="pre">du</span> <span class="pre">staff.</span></code></p></li>
 <li><p><strong>Pas de Harcèlement</strong> : Harceler ou intimider d’autres joueurs est interdit.
@@ -122,11 +161,11 @@ et vous tenir informé des dernières nouveautés.</p>
 </ul>
 </section>
 <section id="regles-du-serveur-faction">
-<h3>2. <strong>Règles du Serveur Faction</strong>:<a class="headerlink" href="#regles-du-serveur-faction" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#regles-du-serveur-faction'">¶</a></h3>
+<h3>2. <strong>Règles du Serveur Faction</strong>:<a class="headerlink" href="#regles-du-serveur-faction" title="Lien vers cette rubrique">¶</a></h3>
 <p>Ces règles s’ajoutent aux règles générales et concernent uniquement le serveur Faction.</p>
 </section>
 <section id="territoire-et-bases">
-<h3>1. Territoire et Bases:<a class="headerlink" href="#territoire-et-bases" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#territoire-et-bases'">¶</a></h3>
+<h3>1. Territoire et Bases:<a class="headerlink" href="#territoire-et-bases" title="Lien vers cette rubrique">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Noms de Factions Appropriés</strong> : Pas de noms offensants ou inappropriés.
 - <code class="docutils literal notranslate"><span class="pre">Exemple</span> <span class="pre">:</span> <span class="pre">donner</span> <span class="pre">à</span> <span class="pre">sa</span> <span class="pre">faction</span> <span class="pre">un</span> <span class="pre">nom</span> <span class="pre">vulgaire</span> <span class="pre">ou</span> <span class="pre">discriminatoire.</span></code></p></li>
@@ -141,7 +180,7 @@ et vous tenir informé des dernières nouveautés.</p>
 </ul>
 </section>
 <section id="combat-et-raid">
-<h3>2. Combat et Raid:<a class="headerlink" href="#combat-et-raid" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#combat-et-raid'">¶</a></h3>
+<h3>2. Combat et Raid:<a class="headerlink" href="#combat-et-raid" title="Lien vers cette rubrique">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Pas de Combat Logging</strong> : Se déconnecter en plein combat est interdit.
 - <code class="docutils literal notranslate"><span class="pre">Exemple</span> <span class="pre">:</span> <span class="pre">quitter</span> <span class="pre">le</span> <span class="pre">serveur</span> <span class="pre">pour</span> <span class="pre">éviter</span> <span class="pre">la</span> <span class="pre">mort.</span></code></p></li>
@@ -156,11 +195,11 @@ et vous tenir informé des dernières nouveautés.</p>
 </ul>
 </section>
 <section id="regles-du-serveur-skyblock">
-<h3>3. <strong>Règles du Serveur Skyblock</strong> :<a class="headerlink" href="#regles-du-serveur-skyblock" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#regles-du-serveur-skyblock'">¶</a></h3>
+<h3>3. <strong>Règles du Serveur Skyblock</strong> :<a class="headerlink" href="#regles-du-serveur-skyblock" title="Lien vers cette rubrique">¶</a></h3>
 <p>Ces règles s’ajoutent aux règles générales et concernent uniquement le serveur Skyblock.</p>
 </section>
 <section id="gestion-de-l-ile">
-<h3>1. Gestion de l’Île:<a class="headerlink" href="#gestion-de-l-ile" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#gestion-de-l-ile'">¶</a></h3>
+<h3>1. Gestion de l’Île:<a class="headerlink" href="#gestion-de-l-ile" title="Lien vers cette rubrique">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Noms d’Îles Appropriés</strong> : Les noms d’îles doivent rester corrects.
 - <code class="docutils literal notranslate"><span class="pre">Exemple</span> <span class="pre">:</span> <span class="pre">nommer</span> <span class="pre">son</span> <span class="pre">île</span> <span class="pre">avec</span> <span class="pre">un</span> <span class="pre">mot</span> <span class="pre">inapproprié.</span></code></p></li>
@@ -175,7 +214,7 @@ et vous tenir informé des dernières nouveautés.</p>
 </ul>
 </section>
 <section id="economie-et-echanges">
-<h3>2. Économie et Échanges:<a class="headerlink" href="#economie-et-echanges" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#economie-et-echanges'">¶</a></h3>
+<h3>2. Économie et Échanges:<a class="headerlink" href="#economie-et-echanges" title="Lien vers cette rubrique">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Pas de Vente IRL</strong> : Échanger des objets en jeu contre de l’argent réel est interdit.
 - <code class="docutils literal notranslate"><span class="pre">Exemple</span> <span class="pre">:</span> <span class="pre">vendre</span> <span class="pre">des</span> <span class="pre">coins</span> <span class="pre">contre</span> <span class="pre">des</span> <span class="pre">euros</span> <span class="pre">via</span> <span class="pre">PayPal.</span></code></p></li>
@@ -190,11 +229,11 @@ et vous tenir informé des dernières nouveautés.</p>
 </ul>
 </section>
 <section id="regles-hors-serveur">
-<h3>4. <strong>Règles Hors-Serveur</strong> :<a class="headerlink" href="#regles-hors-serveur" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#regles-hors-serveur'">¶</a></h3>
+<h3>4. <strong>Règles Hors-Serveur</strong> :<a class="headerlink" href="#regles-hors-serveur" title="Lien vers cette rubrique">¶</a></h3>
 <p>Ces règles s’appliquent sur les plateformes externes comme Discord.</p>
 </section>
 <section id="communication">
-<h3>1. Communication:<a class="headerlink" href="#communication" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#communication'">¶</a></h3>
+<h3>1. Communication:<a class="headerlink" href="#communication" title="Lien vers cette rubrique">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Pas de Spam</strong> : Pas de messages répétés ni d’emojis en excès.
 - <code class="docutils literal notranslate"><span class="pre">Exemple</span> <span class="pre">:</span> <span class="pre">envoyer</span> <span class="pre">10</span> <span class="pre">fois</span> <span class="pre">le</span> <span class="pre">même</span> <span class="pre">message</span> <span class="pre">ou</span> <span class="pre">50</span> <span class="pre">emojis.</span></code></p></li>
@@ -209,7 +248,7 @@ et vous tenir informé des dernières nouveautés.</p>
 </ul>
 </section>
 <section id="remarques-finales">
-<h3>5. <strong>Remarques Finales</strong>:<a class="headerlink" href="#remarques-finales" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#remarques-finales'">¶</a></h3>
+<h3>5. <strong>Remarques Finales</strong>:<a class="headerlink" href="#remarques-finales" title="Lien vers cette rubrique">¶</a></h3>
 <ul class="simple">
 <li><p><strong>Évolution des Règles</strong> : Les règles peuvent être modifiées. Toute mise à jour sera annoncée sur Discord.</p></li>
 <li><p><strong>Faites Preuve de Bon Sens</strong> : Si quelque chose semble abusif, ne le faites pas. En cas de doute, demandez au staff.</p></li>
@@ -219,11 +258,11 @@ et vous tenir informé des dernières nouveautés.</p>
 </section>
 </section>
 <section id="conditions-generales-dutilisation-serveur-discord-ascendia">
-<h2>2. Conditions Générales d’Utilisation – Serveur Discord Ascendia:<a class="headerlink" href="#conditions-generales-dutilisation-serveur-discord-ascendia" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#conditions-generales-dutilisation-serveur-discord-ascendia'">¶</a></h2>
+<h2>2. Conditions Générales d’Utilisation – Serveur Discord Ascendia:<a class="headerlink" href="#conditions-generales-dutilisation-serveur-discord-ascendia" title="Lien vers cette rubrique">¶</a></h2>
 <p><strong>Dernière mise à jour :</strong> 29 mai 2025
 <strong>Entrée en vigueur dès la connexion au serveur</strong></p>
 <section id="acceptation-des-conditions">
-<h3>1. Acceptation des Conditions:<a class="headerlink" href="#acceptation-des-conditions" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#acceptation-des-conditions'">¶</a></h3>
+<h3>1. Acceptation des Conditions:<a class="headerlink" href="#acceptation-des-conditions" title="Lien vers cette rubrique">¶</a></h3>
 <p>En rejoignant le <strong>serveur Discord Ascendia</strong>, vous acceptez :</p>
 <ul class="simple">
 <li><p>Ces <strong>Conditions Générales d’Utilisation</strong></p></li>
@@ -234,7 +273,7 @@ et vous tenir informé des dernières nouveautés.</p>
 <p>Toute infraction peut entraîner un avertissement, une sanction temporaire ou un bannissement définitif.</p>
 </section>
 <section id="conditions-utilisateurs-ascendiabot-aaics">
-<h3>2. Conditions Utilisateurs – AscendiaBot &amp; AaiCS:<a class="headerlink" href="#conditions-utilisateurs-ascendiabot-aaics" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#conditions-utilisateurs-ascendiabot-aaics'">¶</a></h3>
+<h3>2. Conditions Utilisateurs – AscendiaBot &amp; AaiCS:<a class="headerlink" href="#conditions-utilisateurs-ascendiabot-aaics" title="Lien vers cette rubrique">¶</a></h3>
 <p><strong>AscendiaBot</strong> est le bot officiel du serveur Ascendia, développé par la <strong>Dev Team Ascendia</strong>, propulsé par <strong>Ascendia AI Core Services (AaiCS)</strong>.</p>
 <p>En interagissant avec AscendiaBot:</p>
 <ul class="simple">
@@ -245,7 +284,7 @@ et vous tenir informé des dernières nouveautés.</p>
 </ul>
 </section>
 <section id="code-de-conduite-de-lia">
-<h3>3. Code de Conduite de l’IA:<a class="headerlink" href="#code-de-conduite-de-lia" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#code-de-conduite-de-lia'">¶</a></h3>
+<h3>3. Code de Conduite de l’IA:<a class="headerlink" href="#code-de-conduite-de-lia" title="Lien vers cette rubrique">¶</a></h3>
 <p>L’utilisation d’<strong>Ascendia AI 4.5</strong>, <strong>Ascendia e3 mini</strong>, et de tous les modules AaiCS est soumise à un usage responsable.</p>
 <p>Vous vous engagez à :</p>
 <ul class="simple">
@@ -259,7 +298,7 @@ et vous tenir informé des dernières nouveautés.</p>
 <p>Les abus détectés par <strong>Ascendia Moderation AI</strong> ou les modérateurs seront sanctionnés immédiatement.</p>
 </section>
 <section id="donnees-et-confidentialite">
-<h3>4. Données et Confidentialité:<a class="headerlink" href="#donnees-et-confidentialite" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#donnees-et-confidentialite'">¶</a></h3>
+<h3>4. Données et Confidentialité:<a class="headerlink" href="#donnees-et-confidentialite" title="Lien vers cette rubrique">¶</a></h3>
 <ul class="simple">
 <li><p>Nous <strong>ne vendons ni ne partageons</strong> vos données personnelles.</p></li>
 <li><p>Vos interactions peuvent être <strong>temporairement enregistrées</strong> à des fins de modération ou d’analyse.</p></li>
@@ -267,7 +306,7 @@ et vous tenir informé des dernières nouveautés.</p>
 </ul>
 </section>
 <section id="services-premium">
-<h3>5. Services Premium:<a class="headerlink" href="#services-premium" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#services-premium'">¶</a></h3>
+<h3>5. Services Premium:<a class="headerlink" href="#services-premium" title="Lien vers cette rubrique">¶</a></h3>
 <p>Certaines fonctionnalités sont réservées aux utilisateurs <strong>Premium</strong> :</p>
 <ul class="simple">
 <li><p>Accès prioritaire à <code class="docutils literal notranslate"><span class="pre">Ascendia</span> <span class="pre">AI</span> <span class="pre">4.5</span></code></p></li>
@@ -281,7 +320,7 @@ et vous tenir informé des dernières nouveautés.</p>
 </ul>
 </section>
 <section id="reglement-interne-ascendia">
-<h3>6. Règlement Interne Ascendia:<a class="headerlink" href="#reglement-interne-ascendia" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#reglement-interne-ascendia'">¶</a></h3>
+<h3>6. Règlement Interne Ascendia:<a class="headerlink" href="#reglement-interne-ascendia" title="Lien vers cette rubrique">¶</a></h3>
 <p>📜 <strong>Règles Générales :</strong></p>
 <p><strong>🚫 Comportement et Conduite :</strong></p>
 <ul class="simple">
@@ -314,7 +353,7 @@ et vous tenir informé des dernières nouveautés.</p>
 </ul>
 </section>
 <section id="limitation-de-responsabilite">
-<h3>7. Limitation de Responsabilité:<a class="headerlink" href="#limitation-de-responsabilite" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#limitation-de-responsabilite'">¶</a></h3>
+<h3>7. Limitation de Responsabilité:<a class="headerlink" href="#limitation-de-responsabilite" title="Lien vers cette rubrique">¶</a></h3>
 <p>Ascendia et son équipe ne sont <strong>pas responsables de</strong> :</p>
 <ul class="simple">
 <li><p>Contenus publiés par les membres ou réponses de l’IA</p></li>
@@ -323,18 +362,18 @@ et vous tenir informé des dernières nouveautés.</p>
 </ul>
 </section>
 <section id="modifications-et-notifications">
-<h3>8. Modifications et Notifications:<a class="headerlink" href="#modifications-et-notifications" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#modifications-et-notifications'">¶</a></h3>
+<h3>8. Modifications et Notifications:<a class="headerlink" href="#modifications-et-notifications" title="Lien vers cette rubrique">¶</a></h3>
 <p>Les conditions peuvent être mises à jour à tout moment. Les changements majeurs seront annoncés. Rester sur le serveur signifie <strong>accepter les modifications</strong>.</p>
 </section>
 <section id="support-et-contact">
-<h3>9. Support et Contact:<a class="headerlink" href="#support-et-contact" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#support-et-contact'">¶</a></h3>
+<h3>9. Support et Contact:<a class="headerlink" href="#support-et-contact" title="Lien vers cette rubrique">¶</a></h3>
 <ul class="simple">
 <li><p>Ouvrir un ticket via notre système de support</p></li>
 <li><p>Contacter un modérateur certifié Ascendia</p></li>
 </ul>
 </section>
 <section id="reconnaissance">
-<h3><strong>Reconnaissance</strong><a class="headerlink" href="#reconnaissance" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#reconnaissance'">¶</a></h3>
+<h3><strong>Reconnaissance</strong><a class="headerlink" href="#reconnaissance" title="Lien vers cette rubrique">¶</a></h3>
 <p>En restant sur le <strong>serveur Discord Ascendia</strong>, vous reconnaissez avoir <strong>lu, compris et accepté</strong> les présentes conditions.</p>
 <p>Merci de faire partie de notre communauté ! 💚💙
 — L’équipe Ascendia &amp; la Dev Team</p>
@@ -347,77 +386,82 @@ et vous tenir informé des dernières nouveautés.</p>
 <section id="ascendia-wiki">
 <h1>Ascendia WIKI<a class="headerlink" href="#ascendia-wiki" title="Lien vers cette rubrique">¶</a></h1>
 <section id="info">
-<h2>1. Info:<a class="headerlink" href="#info" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#info'">¶</a></h2>
+<h2>1. Info:<a class="headerlink" href="#info" title="Lien vers cette rubrique">¶</a></h2>
 </section>
 <section id="items">
-<h2>2. Items:<a class="headerlink" href="#items" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#items'">¶</a></h2>
+<h2>2. Items:<a class="headerlink" href="#items" title="Lien vers cette rubrique">¶</a></h2>
 </section>
 <section id="events">
-<h2>3. Events:<a class="headerlink" href="#events" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#events'">¶</a></h2>
+<h2>3. Events:<a class="headerlink" href="#events" title="Lien vers cette rubrique">¶</a></h2>
 </section>
 <section id="craft">
-<h2>4. Craft:<a class="headerlink" href="#craft" title="Lien vers cette rubrique" x-intersect.margin.0%.0%.-70%.0%="activeSection = '#craft'">¶</a></h2>
+<h2>4. Craft:<a class="headerlink" href="#craft" title="Lien vers cette rubrique">¶</a></h2>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+</section>
 
-</section>
-</section>
-</div></div><aside class="hidden text-sm xl:block" id="right-sidebar">
-<div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
-<ul>
+    </div></div><aside id="right-sidebar" class="hidden text-sm xl:block">
+  <div class="sticky top-16 -mt-10 max-h-[calc(100vh-5rem)] overflow-y-auto pt-6 space-y-2"><p class="font-medium">On this page</p>
+    <ul>
 <li></li>
-<li><a :data-current="activeSection === '#welcome-to-ascendia'" class="reference internal" href="#welcome-to-ascendia">Welcome to Ascendia:</a><ul>
-<li><a :data-current="activeSection === '#regles-generales-ascendia'" class="reference internal" href="#regles-generales-ascendia">1. Règles Générales Ascendia:</a><ul>
-<li><a :data-current="activeSection === '#comportement-genera'" class="reference internal" href="#comportement-genera">1. Comportement Généra:</a></li>
-<li><a :data-current="activeSection === '#regles-du-serveur-faction'" class="reference internal" href="#regles-du-serveur-faction">2. <strong>Règles du Serveur Faction</strong>:</a></li>
-<li><a :data-current="activeSection === '#territoire-et-bases'" class="reference internal" href="#territoire-et-bases">1. Territoire et Bases:</a></li>
-<li><a :data-current="activeSection === '#combat-et-raid'" class="reference internal" href="#combat-et-raid">2. Combat et Raid:</a></li>
-<li><a :data-current="activeSection === '#regles-du-serveur-skyblock'" class="reference internal" href="#regles-du-serveur-skyblock">3. <strong>Règles du Serveur Skyblock</strong> :</a></li>
-<li><a :data-current="activeSection === '#gestion-de-l-ile'" class="reference internal" href="#gestion-de-l-ile">1. Gestion de l’Île:</a></li>
-<li><a :data-current="activeSection === '#economie-et-echanges'" class="reference internal" href="#economie-et-echanges">2. Économie et Échanges:</a></li>
-<li><a :data-current="activeSection === '#regles-hors-serveur'" class="reference internal" href="#regles-hors-serveur">4. <strong>Règles Hors-Serveur</strong> :</a></li>
-<li><a :data-current="activeSection === '#communication'" class="reference internal" href="#communication">1. Communication:</a></li>
-<li><a :data-current="activeSection === '#remarques-finales'" class="reference internal" href="#remarques-finales">5. <strong>Remarques Finales</strong>:</a></li>
+<li><a class="reference internal" href="#welcome-to-ascendia">Welcome to Ascendia:</a><ul>
+<li><a class="reference internal" href="#regles-generales-ascendia">1. Règles Générales Ascendia:</a><ul>
+<li><a class="reference internal" href="#comportement-genera">1. Comportement Généra:</a></li>
+<li><a class="reference internal" href="#regles-du-serveur-faction">2. <strong>Règles du Serveur Faction</strong>:</a></li>
+<li><a class="reference internal" href="#territoire-et-bases">1. Territoire et Bases:</a></li>
+<li><a class="reference internal" href="#combat-et-raid">2. Combat et Raid:</a></li>
+<li><a class="reference internal" href="#regles-du-serveur-skyblock">3. <strong>Règles du Serveur Skyblock</strong> :</a></li>
+<li><a class="reference internal" href="#gestion-de-l-ile">1. Gestion de l’Île:</a></li>
+<li><a class="reference internal" href="#economie-et-echanges">2. Économie et Échanges:</a></li>
+<li><a class="reference internal" href="#regles-hors-serveur">4. <strong>Règles Hors-Serveur</strong> :</a></li>
+<li><a class="reference internal" href="#communication">1. Communication:</a></li>
+<li><a class="reference internal" href="#remarques-finales">5. <strong>Remarques Finales</strong>:</a></li>
 </ul>
 </li>
-<li><a :data-current="activeSection === '#conditions-generales-dutilisation-serveur-discord-ascendia'" class="reference internal" href="#conditions-generales-dutilisation-serveur-discord-ascendia">2. Conditions Générales d’Utilisation – Serveur Discord Ascendia:</a><ul>
-<li><a :data-current="activeSection === '#acceptation-des-conditions'" class="reference internal" href="#acceptation-des-conditions">1. Acceptation des Conditions:</a></li>
-<li><a :data-current="activeSection === '#conditions-utilisateurs-ascendiabot-aaics'" class="reference internal" href="#conditions-utilisateurs-ascendiabot-aaics">2. Conditions Utilisateurs – AscendiaBot &amp; AaiCS:</a></li>
-<li><a :data-current="activeSection === '#code-de-conduite-de-lia'" class="reference internal" href="#code-de-conduite-de-lia">3. Code de Conduite de l’IA:</a></li>
-<li><a :data-current="activeSection === '#donnees-et-confidentialite'" class="reference internal" href="#donnees-et-confidentialite">4. Données et Confidentialité:</a></li>
-<li><a :data-current="activeSection === '#services-premium'" class="reference internal" href="#services-premium">5. Services Premium:</a></li>
-<li><a :data-current="activeSection === '#reglement-interne-ascendia'" class="reference internal" href="#reglement-interne-ascendia">6. Règlement Interne Ascendia:</a></li>
-<li><a :data-current="activeSection === '#limitation-de-responsabilite'" class="reference internal" href="#limitation-de-responsabilite">7. Limitation de Responsabilité:</a></li>
-<li><a :data-current="activeSection === '#modifications-et-notifications'" class="reference internal" href="#modifications-et-notifications">8. Modifications et Notifications:</a></li>
-<li><a :data-current="activeSection === '#support-et-contact'" class="reference internal" href="#support-et-contact">9. Support et Contact:</a></li>
-<li><a :data-current="activeSection === '#reconnaissance'" class="reference internal" href="#reconnaissance"><strong>Reconnaissance</strong></a></li>
+<li><a class="reference internal" href="#conditions-generales-dutilisation-serveur-discord-ascendia">2. Conditions Générales d’Utilisation – Serveur Discord Ascendia:</a><ul>
+<li><a class="reference internal" href="#acceptation-des-conditions">1. Acceptation des Conditions:</a></li>
+<li><a class="reference internal" href="#conditions-utilisateurs-ascendiabot-aaics">2. Conditions Utilisateurs – AscendiaBot &amp; AaiCS:</a></li>
+<li><a class="reference internal" href="#code-de-conduite-de-lia">3. Code de Conduite de l’IA:</a></li>
+<li><a class="reference internal" href="#donnees-et-confidentialite">4. Données et Confidentialité:</a></li>
+<li><a class="reference internal" href="#services-premium">5. Services Premium:</a></li>
+<li><a class="reference internal" href="#reglement-interne-ascendia">6. Règlement Interne Ascendia:</a></li>
+<li><a class="reference internal" href="#limitation-de-responsabilite">7. Limitation de Responsabilité:</a></li>
+<li><a class="reference internal" href="#modifications-et-notifications">8. Modifications et Notifications:</a></li>
+<li><a class="reference internal" href="#support-et-contact">9. Support et Contact:</a></li>
+<li><a class="reference internal" href="#reconnaissance"><strong>Reconnaissance</strong></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a :data-current="activeSection === '#faq'" class="reference internal" href="#faq">FAQ:</a></li>
-<li><a :data-current="activeSection === '#ascendia-wiki'" class="reference internal" href="#ascendia-wiki">Ascendia WIKI</a><ul>
-<li><a :data-current="activeSection === '#info'" class="reference internal" href="#info">1. Info:</a></li>
-<li><a :data-current="activeSection === '#items'" class="reference internal" href="#items">2. Items:</a></li>
-<li><a :data-current="activeSection === '#events'" class="reference internal" href="#events">3. Events:</a></li>
-<li><a :data-current="activeSection === '#craft'" class="reference internal" href="#craft">4. Craft:</a></li>
+<li><a class="reference internal" href="#faq">FAQ:</a></li>
+<li><a class="reference internal" href="#ascendia-wiki">Ascendia WIKI</a><ul>
+<li><a class="reference internal" href="#info">1. Info:</a></li>
+<li><a class="reference internal" href="#items">2. Items:</a></li>
+<li><a class="reference internal" href="#events">3. Events:</a></li>
+<li><a class="reference internal" href="#craft">4. Craft:</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </aside>
-</main>
-</div>
-</div><footer class="py-6 border-t border-border md:py-0">
-<div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
-<div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
-<p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2025 Ascendia Dev Team &amp; Ascendia Minecraft Server Group. All rights reserved. </p>
+        </main>
+      </div>
+    </div><footer class="py-6 border-t border-border md:py-0">
+    <div class="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
+      <div class="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
+        <p class="text-sm leading-loose text-center text-muted-foreground md:text-left">© 2025 Ascendia Group. All rights reserved. Developed by the Ascendia Dev Team. 
+Operated and maintained by the Ascendia Minecraft Server Division.&nbsp;</p>
 </div>
 </div>
 </footer>
-</div>
-<script src="_static/documentation_options.js?v=fbdd5207"></script>
-<script src="_static/doctools.js?v=9bcbadda"></script>
-<script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-<script defer="defer" src="_static/theme.js?v=073f68d9"></script>
-<script src="_static/translations.js?v=e6b791cb"></script>
+  </div>
+  
+    <script src="_static/documentation_options.js?v=fbdd5207"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script defer="defer" src="_static/theme.js?v=073f68d9"></script>
+    <script src="_static/translations.js?v=e6b791cb"></script>
+  
 </body>
 </html>
