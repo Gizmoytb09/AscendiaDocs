@@ -8,7 +8,7 @@
 
 project = 'Ascendia Docs'
 copyright = '2025 Ascendia Dev Team & Ascendia Minecraft Server Group. All rights reserved.'
-author = 'Ascendia Dev Team & Ascendia Minecraft Server Group'
+author = 'Ascendia Dev Team & Ascendia Minecraft Server Group '
 release = 'V1'
 
 # -- General configuration ---------------------------------------------------
